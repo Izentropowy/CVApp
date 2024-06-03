@@ -1,11 +1,9 @@
 import { useState } from "react";
 import Setup from "./Setup";
 import Visualization from "./Visualization";
-import { useEffect } from "react";
 
 function App() {
   const [data, setData] = useState({});
-  useEffect(() => console.log(data), [data]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

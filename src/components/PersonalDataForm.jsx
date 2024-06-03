@@ -26,6 +26,9 @@ const PersonalDataForm = ({ handleChange }) => {
           onChange={handleChange}
         />
 
+        <label htmlFor="mail">Mail:</label>
+        <input type="text" id="mail" name="mail" onChange={handleChange} />
+
         <label htmlFor="address">Address:</label>
         <input
           type="text"
@@ -33,9 +36,6 @@ const PersonalDataForm = ({ handleChange }) => {
           name="address"
           onChange={handleChange}
         />
-
-        <label htmlFor="mail">Mail:</label>
-        <input type="text" id="mail" name="mail" onChange={handleChange} />
 
         <label htmlFor="linkedin">LinkedIn:</label>
         <input
