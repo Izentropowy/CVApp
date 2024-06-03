@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body, #root{
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.setup, .visualization {
+    padding: 5px 10px;
+    flex: 1;
+}
+
+.setup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.setup-form, .collapse-button {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+.setup-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+.collapse-button {
+    text-align: center;
+    background-color: #f1f1f1;
+    font-size: larger;
+    font-weight: 600;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    background: none;
+  }
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+
+input, textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+.visualization {
+    border: 2px solid black;
+    padding: 0;
+    background-color: white;
+}
+
+.visualization {
+    display: flex;
+}
+
+hr {
+    margin: 0 10%;
+}
+
+.left {
+    flex: 2;
+    background-color: rgb(22, 39, 83);
+    color: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.left > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 3;
+    padding-left: 40px;
+}
+
+.photo {
+    margin: 0 auto;
+    border-radius:50%;
+    height: 200px;
+    width: 200px;
+    background: url("/src/assets/person.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.line {
+    height: 1px; 
+    background-color: black;  
+    margin-right: 50%;
+  }
+
+  i {
+    width: 20px;
+    margin: 10px;
+  }
+
+  .centered-header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+  }
+  
+  .centered-header i {
+    position: absolute;
+    left: -50px; 
+  }
+  
+  .centered-header h2 {
+    margin: 0 auto; 
+  }
+
+  .submit-button {
+    margin-top: 10px;
+    background-color: rgb(76, 197, 76);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+
+  .added {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgb(22, 39, 83);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  .delete {
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+
+.visualization-content {
+  margin-right: 5em;
+}
+
+  .dates {
+    display:flex;
+    justify-content: space-between;
+  }
