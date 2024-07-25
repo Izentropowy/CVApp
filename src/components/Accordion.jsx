@@ -2,6 +2,9 @@ import Panel from "./Panel";
 import { useState } from "react";
 import PersonalDataForm from "./PersonalDataForm";
 import EducationForm from "./EducationForm";
+import ExperienceForm from "./ExperienceForm";
+import SkillsForm from "./SkillsForm";
+import CertificatesForm from "./CertificatesForm";
 
 const Accordion = ({ handleChange, appendData, removeData }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -25,8 +28,8 @@ const Accordion = ({ handleChange, appendData, removeData }) => {
         }
         form={EducationForm}
         appendData={appendData}
-        title="Education"
         removeData={removeData}
+        title="Education"
       ></Panel>
       <Panel
         handleChange={handleChange}
@@ -34,7 +37,9 @@ const Accordion = ({ handleChange, appendData, removeData }) => {
         onShow={() =>
           activeIndex !== 2 ? setActiveIndex(2) : setActiveIndex(null)
         }
-        form={EducationForm}
+        form={ExperienceForm}
+        appendData={appendData}
+        removeData={removeData}
         title="Experience"
       ></Panel>
       <Panel
@@ -43,7 +48,9 @@ const Accordion = ({ handleChange, appendData, removeData }) => {
         onShow={() =>
           activeIndex !== 3 ? setActiveIndex(3) : setActiveIndex(null)
         }
-        form={EducationForm}
+        form={SkillsForm}
+        appendData={appendData}
+        removeData={removeData}
         title="Skills"
       ></Panel>
       <Panel
@@ -52,7 +59,9 @@ const Accordion = ({ handleChange, appendData, removeData }) => {
         onShow={() =>
           activeIndex !== 4 ? setActiveIndex(4) : setActiveIndex(null)
         }
-        form={EducationForm}
+        form={CertificatesForm}
+        appendData={appendData}
+        removeData={removeData}
         title="Certificates"
       ></Panel>
     </>

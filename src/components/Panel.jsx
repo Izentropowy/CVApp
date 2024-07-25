@@ -17,20 +17,20 @@ const Panel = ({
 
     const formData = new FormData(e.target);
     const formProps = Object.fromEntries(formData);
-    const name = formProps.educationName;
+    console.log(formProps);
+    const name = Object.values(formProps)[0];
     // add 0 as a fisrt char to mark it as an added data
     const id = `0${uuidv4()}`;
-
     appendData(id, formProps, Object.keys(formProps));
 
     // clear form
     e.target.reset();
-
     setAddedList([...AddedList, { name, id }]);
   };
 
   const handleDelete = (id) => {
     setAddedList(AddedList.filter((item) => item.id !== id));
+    ``;
     removeData(id);
   };
 

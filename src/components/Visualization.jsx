@@ -3,10 +3,7 @@ import Photo from "./Photo";
 import Contact from "./Contact";
 import Community from "./Community";
 import About from "./About";
-import Education from "./Education";
-import Experience from "./Experience";
-import Skills from "./Skills";
-import Certificates from "./Certificates";
+import Section from "./Section";
 
 const Visualization = ({ data }) => {
   return (
@@ -18,7 +15,6 @@ const Visualization = ({ data }) => {
         <Contact
           phoneNumber={data.phoneNumber}
           address={data.address}
-          s
           mail={data.mail}
         ></Contact>
         <hr />
@@ -26,10 +22,30 @@ const Visualization = ({ data }) => {
       </div>
       <div className="right">
         <About about={data.about}></About>
-        <Education data={data}></Education>
-        <Experience></Experience>
-        <Skills></Skills>
-        <Certificates></Certificates>
+        <Section
+          title="Education"
+          icon="fa-graduation-cap"
+          filterKey="education"
+          data={data}
+        ></Section>
+        <Section
+          title="Experience"
+          icon="fa-briefcase"
+          filterKey="experience"
+          data={data}
+        ></Section>
+        <Section
+          title="Skills"
+          icon="fa-tools"
+          filterKey="skill"
+          data={data}
+        ></Section>
+        <Section
+          title="Certificates"
+          icon="fa-certificate"
+          filterKey="certificate"
+          data={data}
+        ></Section>
       </div>
     </>
   );
