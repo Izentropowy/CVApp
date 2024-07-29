@@ -9,6 +9,7 @@ const Panel = ({
   title,
   appendData,
   removeData,
+  data,
 }) => {
   const [AddedList, setAddedList] = useState([]);
 
@@ -17,7 +18,6 @@ const Panel = ({
 
     const formData = new FormData(e.target);
     const formProps = Object.fromEntries(formData);
-    console.log(formProps);
     const name = Object.values(formProps)[0];
     // add 0 as a fisrt char to mark it as an added data
     const id = `0${uuidv4()}`;
@@ -46,6 +46,7 @@ const Panel = ({
           handleSubmit={handleSubmit}
           handleDelete={handleDelete}
           elements={AddedList}
+          data={data}
         />
       )}
     </>

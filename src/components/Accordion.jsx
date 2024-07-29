@@ -6,7 +6,7 @@ import ExperienceForm from "./ExperienceForm";
 import SkillsForm from "./SkillsForm";
 import CertificatesForm from "./CertificatesForm";
 
-const Accordion = ({ handleChange, appendData, removeData }) => {
+const Accordion = ({ handleChange, appendData, removeData, data }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
@@ -19,6 +19,7 @@ const Accordion = ({ handleChange, appendData, removeData }) => {
         }
         form={PersonalDataForm}
         title="Personal data"
+        data={data}
       ></Panel>
       <Panel
         handleChange={handleChange}
